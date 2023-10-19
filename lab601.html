@@ -50,16 +50,19 @@ td, th {
   </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
-//This is where I will start my JavaScript code
-console.log("started Javascript");
+  $(document).ready (function() {
+    //This is where I will start my JavaScript code
+    console.log("started Javascript");
 
-//do this when we click on the clicktoreveal1 button
-  $("#clicktoreveal1").click(function() {
-    //run this when  click on this button
-    console.log("clicked on the 1st button");
-  $("#clicktoreveal1").html("Please, hold the applause.");
+  //do this when we click on the clicktoreveal1 button
+    $("#clicktoreveal1").click(function() {
+      //run this when  click on this button
+      console.log("clicked on the 1st button");
+    $("#clicktoreveal1").html("Please, hold the applause.");
+
+  //closing the document.ready
   });
-  
+  });
 </script>
 
 <body>
