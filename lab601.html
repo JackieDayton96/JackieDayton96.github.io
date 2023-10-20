@@ -60,14 +60,16 @@ td, th {
       console.log("clicked on the 1st button");
     $("#div_ctr1").html("Please, hold the applause.");
       });
+    
     // hide and show the picture
-    $("#hide").click(function(){
-    $("img").hide(1000);
-      //when clicked this should hide the picture
+    $("#hide/show picture").click(function(){
       console.log("hide the picture")
+    $("#circles").hide(slow);
+      //when clicked this should hide the picture
       });
-    $("#show").click(function(){
-    $("img").show(1000);
+    
+    $("#hide/show picture").click(function(){
+    $("img").show(fast);
       //when clicked this should show the picture
       console.log("show the picture")
       });
@@ -124,6 +126,7 @@ td, th {
     <img id="circles" src="circles.png">
       <p class="caption">Circles<p/>
       <p class="caption">Art by Me</p>
+      <button id="hide/show picture">Hide/Show Picture</button>
     </div>
 
     <a href="https://www.eggradients.com/tool/benedict-cumberbatch-name-generator">the Benedict Cumberbatch Name Generator</a>
