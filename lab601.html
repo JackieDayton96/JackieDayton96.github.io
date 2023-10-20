@@ -60,11 +60,13 @@ td, th {
       console.log("clicked on the 1st button");
     $("#div_ctr1").html("Please, hold the applause.");
       });
-    // toggle the picture on and off
-       $("#togglephoto").click(function () {
-         console.log("toggle the picture");
-         $("#circles").fadeToggle(100);
-       });
+    // hide and show the picture
+    $("#hide").click(function(){
+    $("circles").hide(1000);
+      });
+    $("#show").click(function(){
+    $("circles").show(1000);
+      });
     //closing the document.ready
   });
 </script>
