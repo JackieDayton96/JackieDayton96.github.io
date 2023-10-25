@@ -3,9 +3,8 @@
   <head>
     <title>Hangman!</title>
     <style>
-      #title {margin: center;
-              font: 30px Veranda sans-serif;
-              font-color: purple;
+      #title {font: 30px sans-serif;
+              font-color: 9932CC;
              }
       #alphabet { margin: auto;
                   padding: 20px; }
@@ -48,7 +47,7 @@
                 
                     // use text to get the letter that was clicked on
                       letter = $(this).text()
-                      console.log ("clicked on ", letter")
+                      console.log ("clicked on ".letter")
 
                     // make a line through the letter
                       $(this).css("text-decoration"' "line-through")
