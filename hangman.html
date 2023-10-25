@@ -3,21 +3,24 @@
   <head>
     <title>Hangman!</title>
     <style>
-      #intro {font: 30px sans-serif;
+      #intro {align: center;
+              font: 30px sans-serif;
               text-color: 9932CC;
              }
-      #alphabet { margin: auto;
+      #alphabet { align: center;
+                  margin: auto;
                   padding: 20px;
                   font: sans-serif;
                   text-color: 9932CC;}
-      #word { margin: auto;
+      #word { align: center;
+              margin: auto;
               font: 400em sans-serif bold;
               padding: 20px;
             }
       #info { padding: 20px; 
               font: sans-serif;
               font-color: red;
-              background-color: B0E0E6; 
+              background-color: light blue; 
             }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -99,9 +102,9 @@
     </script>
   </head>
   <body>
-    <div id= "intro">Let's Play Hangman!</div>
-     <div id="guesses"></div>
-     <div id="info"></div>
+    <div id= "intro">Let's Play HANGMAN!</div>
+     <div id="guesses">10 Guesses left</div>
+     <div id="info"><p>Welcome to HANGMAN! You have 10 chnaces to spell the mystery word correctly!</p></div>
      <div id="word"></div>
      <div id="alphabet"><p>Click to make a guess!</p>
      <span class="letter" id="a">a</span>
