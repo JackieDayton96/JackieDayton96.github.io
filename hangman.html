@@ -3,19 +3,21 @@
   <head>
     <title>Hangman!</title>
     <style>
-      #title {font: 30px sans-serif;
-              font-color: 9932CC;
+      #intro {font: 30px sans-serif;
+              text-color: 9932CC;
              }
       #alphabet { margin: auto;
-                  padding: 20px; }
+                  padding: 20px;
+                  font: sans-serif;
+                  text-color: 9932CC;}
       #word { margin: auto;
-              font: 400em Veranda sans-serif bold;
+              font: 400em sans-serif bold;
               padding: 20px;
             }
       #info { padding: 20px; 
-              font: Veranda sans-serif;
+              font: sans-serif;
               font-color: red;
-              background-color: AFEEEE; 
+              background-color: B0E0E6; 
             }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -47,7 +49,7 @@
                 
                     // use text to get the letter that was clicked on
                       letter = $(this).text()
-                      console.log ("clicked on ".letter")
+                      console.log ("clicked on "letter")
 
                     // make a line through the letter
                       $(this).css("text-decoration"' "line-through")
@@ -97,7 +99,7 @@
     </script>
   </head>
   <body>
-    <div id= "title"><h1>Let's Play Hangman!</h1></div>
+    <div id= "intro">Let's Play Hangman!</div>
      <div id="guesses"></div>
      <div id="info"></div>
      <div id="word"></div>
