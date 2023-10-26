@@ -86,6 +86,7 @@
 
                     // make a line through the letter
                       $(this).css("text-decoration", "line-through");
+                      console.log("line-through" not working);
 
                     // if the letter has already been clicked on, 
                     // let the user know it's already been tried
@@ -118,17 +119,19 @@
                       // and replace the letters with blanks in word
                       while (word.includes (letter)) {
                        index = word.indexOf (letter);
-                       console.log("index of word is ", index");
+                       console.log("index of word is ",index");
                        word = word.substring(0, index) + " " + word.substring ((index + 1));
                        blank = blank.substring(0,index) + letter + blank.substring ((index + 1));
 
                        $("#word").text(blank);
-                       console.log ("word is ", word"");
-                       console.log ("blank is ", blank"");
+                       console.log ("word is ",word"");
+                       console.log ("blank is ",blank"");
                       }
                      
                       // check if the player has won the game
-
+                      if (! blank.includes("-")) {
+                       gameWon = true;
+                       $("#info").text("HOLY CANNOLI! YOU WON!");
 
                     }
 
