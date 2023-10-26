@@ -66,7 +66,7 @@
 
               // this is the number of tries left
               tries = 10;
-              $("#guesses").text("Guesses left: "+tries);
+              $("#guesses").text("Guesses left: "+tries");
 
               // boolean (true / false variable) to track if game has been won or lost
               gameWon = false;
@@ -82,7 +82,7 @@
                 
                     // use text to get the letter that was clicked on
                       letter = $(this).text()
-                      console.log ("clicked on "letter"")
+                      console.log ("clicked on letter")
 
                     // make a line through the letter
                       $(this).css("text-decoration", "line-through")
@@ -102,7 +102,7 @@
                       // are they out of tries? then they lost!
                       if(tries < 1){
                         gameLost = true;
-                        $("info").text("Ah, snap! No more guesses for you! YOU LOSE!");
+                        $("info").text("Tiddlywinks! No more guesses for you! YOU LOSE!");
                       }
                     
                     
@@ -138,7 +138,7 @@
      <div id="guesses">10 Guesses left</div>
      <div id="welcome"><p><h3>Welcome to HANGMAN! You have 10 chances to spell the mystery word correctly!</h3></p></div>
      <div id="info"></div>
-     <div id="word"></div>
+     <div id="word">comeuppance</div>
      <div id="alphabet"><p>Click to make a guess!</p>
      <span class="letter" id="a">a</span>
      <span class="letter" id="b">b</span>
