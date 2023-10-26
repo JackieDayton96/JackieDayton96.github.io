@@ -3,32 +3,38 @@
   <head>
     <title>Hangman!</title>
     <style>
-      #intro {font: sans-serif;
-              text-color: 9932CC;
+      #intro {
+  font: sans-serif;
+              color: purple;
              }
-      #alphabet { align: center;
+      #alphabet {
+        margin: center;
                   margin: auto;
                   padding: 20px;
                   font: sans-serif;
-                  text-color: 9932CC;}
-      #word { margin-left: 20px
-              margin-right: 20px
-              margin-top: 15px
-              margin-bottom: 15px;
+                  color: purple;
+                  }
+      #word {
+        margin-left: 2 inches;
+              margin-right: 2 inches;
+              margin-top: 1 inches;
+              margin-bottom: 1 inches;
               font: 400em sans-serif bold;
               padding: 20px;
             }
-      #welcome { margin-left: 20px
-                 margin-right: 20px
-                 margin-top: 15px
-                 margin-bottom: 15px;
-                 font-color: 9932CC;
+      #welcome {
+      margin-left: 2 inches;
+              margin-right: 2 inches;
+              margin-top: 1 inches;
+              margin-bottom: 1 inches;
+                 color: purple;
                }
-      #info { padding: 20px; 
+      #info {
+      padding: 20px;
               font: sans-serif;
-              font-color: red;
-              background-color: yellow; 
-            }
+              color: red;
+              background-color: yellow;
+              }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
@@ -39,7 +45,7 @@
               $("#word").text(blank);
 
               // this is the list of letters that have been tried
-              triedLetters = "";
+              triedLetters = ""
 
               // this is the number of tries left
               tries = 10;
