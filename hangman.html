@@ -67,6 +67,7 @@
               // this is the number of tries left
               tries = 10;
               $("#guesses").text("Guesses left: "+tries");
+         }
 
               // boolean (true / false variable) to track if game has been won or lost
               gameWon = false;
@@ -102,7 +103,7 @@
                       $("#guesses").text("Guesses left: "+tries");
 
                       // are they out of tries? then they lost!
-                      if(tries < 1){
+                      if(tries < 1) {
                         gameLost = true;
                         $("info").text("Tiddlywinks! No more guesses for you! YOU LOSE!");
                       }
