@@ -100,7 +100,10 @@
                       $("#guesses").text("Guesses left: "+tries");
 
                       // are they out of tries? then they lost!
-
+                      if(tries < 1){
+                        gameLost = true;
+                        $("info").text("Ah, snap! No more guesses for you! YOU LOSE!");
+                      }
                     
                     
                     // otherwise, put a line through it and
