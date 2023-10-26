@@ -44,7 +44,7 @@
       #info {
       padding: 20px;
               font-family: Helvetica, Arial, times, serif;
-              color: red;
+              color: purple;
               background-color: yellow;
         margin-left: 60px;
               margin-right: 50px;
@@ -59,7 +59,7 @@
               word =  "c o m e u p p a n c e";
               blank = "- - - - - - - - - - -";
               $("#word").text(blank);
-           console.log("blank not responding")
+           console.log("blanks responding")
 
               // this is the list of letters that have been tried
               triedLetters = "";
@@ -83,7 +83,8 @@
                     // use text to get the letter that was clicked on
                       letter = $(this).text("");
                       console.log ("clicked on letter")
-                      console.log ("letter clicks not working")
+                      console.log ("letter clicks operating")
+                      console.log ("+letter+ clicked")
 
                     // make a line through the letter
                       $(this).css("text-decoration", "line-through");
