@@ -3,8 +3,7 @@
   <head>
     <title>Hangman!</title>
     <style>
-      #intro {align: center;
-              font: 30px sans-serif;
+      #intro {font: sans-serif;
               text-color: 9932CC;
              }
       #alphabet { align: center;
@@ -12,15 +11,17 @@
                   padding: 20px;
                   font: sans-serif;
                   text-color: 9932CC;}
-      #word { align: center;
-              margin: auto;
+      #word { margin-left: 20px
+              margin-right: 20px
+              margin-top: 15px
+              margin-bottom: 15px;
               font: 400em sans-serif bold;
               padding: 20px;
             }
       #info { padding: 20px; 
               font: sans-serif;
               font-color: red;
-              background-color: light blue; 
+              background-color: yellow; 
             }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -60,7 +61,7 @@
                     // if the letter has already been clicked on, 
                     // let the user know it's already been tried
                     if (triedLetters.includes(letter)) {
-                      $("#info").text("Letter "+letter" already tried!");
+                      $("#info").text("Letter "+letter+" already tried!");
 
                     // if the letter isn't in the word, reduce
                     // the number of tries and check if they lost
@@ -102,9 +103,9 @@
     </script>
   </head>
   <body>
-    <div id= "intro">Let's Play HANGMAN!</div>
+    <div id= "intro"><h1>Let's Play HANGMAN!</h1></div>
      <div id="guesses">10 Guesses left</div>
-     <div id="info"><p>Welcome to HANGMAN! You have 10 chnaces to spell the mystery word correctly!</p></div>
+     <div id="info"><p>Welcome to HANGMAN! You have 10 chances to spell the mystery word correctly!</p></div>
      <div id="word"></div>
      <div id="alphabet"><p>Click to make a guess!</p>
      <span class="letter" id="a">a</span>
