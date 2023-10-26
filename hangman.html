@@ -81,7 +81,7 @@
                       $("#info").text("");
                 
                     // use text to get the letter that was clicked on
-                      letter = $(this).text();
+                      letter = $(this).text("");
                       console.log ("clicked on letter")
                       console.log ("letter clicks not working")
 
@@ -99,12 +99,12 @@
 
                       // reduce the number of remaining tries by 1
                      tries = tries - 1
-                      $("#guesses").text("Guesses left: "+tries");
+                      $("#guesses").text("Guesses left: "+tries"");
 
                       // are they out of tries? then they lost!
                       if(tries < 1) {
                         gameLost = true;
-                        $("info").text("Tiddlywinks! No more guesses for you! YOU LOSE!");
+                        $("#info").text("Tiddlywinks! No more guesses for you! YOU LOSE!");
                       }
                     
                     
