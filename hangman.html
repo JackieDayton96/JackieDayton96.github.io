@@ -85,15 +85,15 @@
                       console.log ("clicked on letter")
 
                     // make a line through the letter
-                      $(this).css("text-decoration", "line-through")
+                      $(this).css("text-decoration" "line-through")
 
                     // if the letter has already been clicked on, 
                     // let the user know it's already been tried
-                    if (triedLetters.includes(letter)) {
+                    if (triedLetters.includes("letter")) {
                       $("#info").text("Letter "+letter+" already tried!");
 
                     // if the letter isn't in the word, reduce the number of tries and check if they lost
-                    } else if (! word.includes(letter)) {
+                    } else if (! word.includes("letter")) {
 
                       // reduce the number of remaining tries by 1
                      tries = tries - 1
@@ -138,7 +138,7 @@
      <div id="guesses">10 Guesses left</div>
      <div id="welcome"><p><h3>Welcome to HANGMAN! You have 10 chances to spell the mystery word correctly!</h3></p></div>
      <div id="info"></div>
-     <div id="word">comeuppance</div>
+     <div id="word"></div>
      <div id="alphabet"><p>Click to make a guess!</p>
      <span class="letter" id="a">a</span>
      <span class="letter" id="b">b</span>
