@@ -59,6 +59,7 @@
               word =  "comeuppance";
               blank = "- - - - - - - - - - -";
               $("#word").text(blank);
+           console.log("blank not responding")
 
               // this is the list of letters that have been tried
               triedLetters = ""
@@ -81,18 +82,17 @@
                 
                     // use text to get the letter that was clicked on
                       letter = $(this).text()
-                      console.log ("clicked on "letter")
+                      console.log ("clicked on "letter"")
 
                     // make a line through the letter
-                      $(this).css("text-decoration"' "line-through")
+                      $(this).css("text-decoration", "line-through")
 
                     // if the letter has already been clicked on, 
                     // let the user know it's already been tried
                     if (triedLetters.includes(letter)) {
                       $("#info").text("Letter "+letter+" already tried!");
 
-                    // if the letter isn't in the word, reduce
-                    // the number of tries and check if they lost
+                    // if the letter isn't in the word, reduce the number of tries and check if they lost
                     } else if (! word.includes(letter)) {
 
                       // reduce the number of remaining tries by 1
