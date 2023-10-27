@@ -73,11 +73,11 @@
                   // check if the game has been won or lost
                   if (gameWon != true && gameLost != true) {
                     // erase the info box
-                      $("#info").text(" ");
+                      $("#info").text("");
                 
                     // use text to get the letter that was clicked on
                       letter = $(this).text(" ");
-                      console.log ("letter click")
+                      console.log("letter click")
 
                     // make a line through the letter
                       $(this).css("text-decoration", "line-through");
@@ -119,8 +119,8 @@
                        blank = blank.substring(0,index) + letter + blank.substring ((index + 1));
 
                        $("#word").text(blank);
-                       console.log ("word is", word"");
-                       console.log ("blank is", blank"");
+                       console.log("word is", word"");
+                       console.log("blank is", blank"");
                       }
                      
                       // check if the player has won the game
