@@ -54,14 +54,14 @@
               word =  "c o m e u p p a n c e";
               blank = "- - - - - - - - - - -";
                 $("#word").text(blank);
-                console.log("blanks responding")
+                 console.log("blanks responding");
 
               // this is the list of letters that have been tried
               triedLetters = "";
 
               // this is the number of tries left
               tries = 10;
-              $("#guesses").text("Guesses left: "+tries+"");
+              $("#guesses").text("Guesses left: "+tries+);
 
               // boolean (true / false variable) to track if game has been won or lost
               gameWon = false;
@@ -76,30 +76,31 @@
                       $("#info").text("");
                 
                     // use text to get the letter that was clicked on
-                      letter = $(this).text("");
-                      console.log("letter click")
+                      letter = $(this).text();
+                      console.log("clickd on ", letter);
 
                     // make a line through the letter
-                      $(this).css("text-decoration" ,"line-through");
+                      $(this).css("text-decoration", "line-through");
                   }
+               
                     // if the letter has already been clicked on, 
                     // let the user know it's already been tried
-                    if (triedLetters.includes("letter")) {
-                      $("#info").text("Letter "+letter+" already tried!");
+                       if (triedLetters.includes("letter")) {
+                       $("#info").text("Letter "+letter+" already tried!");
 
                     // if the letter isn't in the word
                     // reduce the number of tries and check if they lost
-                    } else if (! word.includes("letter")) {
+                      } else if (! word.includes(letter)) {
 
                       // reduce the number of remaining tries by 1
-                     tries = tries - 1
-                      $("#guesses").text("Guesses left: "+tries+"");
+                         tries = tries - 1 {
+                         $("#guesses").text("Guesses left: "+tries);
 
                       // are they out of tries? then they lost!
-                      if(tries < 1) {
+                        if(tries < 1) {
                         gameLost = true;
                         $("#info").text("Tiddlywinks! No more guesses for you! YOU LOSE!");
-                      }
+                        }
                     
                     
                     // otherwise, put a line through it and
@@ -114,9 +115,9 @@
                       while (word.includes (letter)) {
                        index = word.indexOf (letter);
                        console.log ("index of word is ", index);
-                       word = word.substring(0, index) + " " + word.substring ((index + 1));
-                       blank = blank.substring(0,index) + letter + blank.substring ((index + 1));
-
+                       word = word.substring(0, index) + " " + word.substring((index + 1));
+                       blank = blank.substring(0,index) + letter + blank.substring((index + 1));
+                      }
                        $("#word").text(blank);
                        console.log("word is ", word);
                        console.log("blank is ", blank);
@@ -130,8 +131,8 @@
                     }
 
                     // add the letter to letters already tried
-                    triedLetters = triedLetters + letter;
-                     console.log("triedLetters is ", triedLetters);
+                       triedLetters = triedLetters + letter;
+                       console.log("triedLetters is ", triedLetters);
                   }
               });
 
