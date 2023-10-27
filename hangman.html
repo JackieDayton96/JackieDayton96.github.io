@@ -3,8 +3,7 @@
   <head>
     <title>Hangman!</title>
     <style>
-      #intro {
-  font-family: Helvetica, Arial, times, serif;
+      #intro {font-family: Helvetica, Arial, times, serif;
               color: purple;
              }
       #guesses {font-family: Helvetica, Arial, times, serif;
@@ -14,8 +13,7 @@
               margin-top: 30px;
               margin-bottom: 30px
                }
-      #alphabet {
-                  margin-left: 60px;
+      #alphabet {margin-left: 60px;
               margin-right: 50px;
               margin-top: 30px;
               margin-bottom: 30px
@@ -24,8 +22,7 @@
                   font-family: Helvetica, Arial, times, serif;
                   color: purple;
                   }
-      #word {
-        margin-left: 60px;
+      #word {margin-left: 60px;
               margin-right: 50px;
               margin-top: 30px;
               margin-bottom: 30px;
@@ -33,16 +30,14 @@
         font-family: Helvetica, Arial, times, serif bold;
               padding: 20px;
             }
-      #welcome {
-      margin-left: 60px;
+      #welcome {margin-left: 60px;
               margin-right: 50px;
               margin-top: 30px;
               margin-bottom: 30px;
         font-family: Helvetica, Arial, times, serif;
                  color: purple;
                }
-      #info {
-      padding: 20px;
+      #info {padding: 20px;
               font-family: Helvetica, Arial, times, serif;
               color: purple;
               background-color: yellow;
@@ -82,11 +77,11 @@
                 
                     // use text to get the letter that was clicked on
                       letter = $(this).text(" ");
-                      console.log ("clicked on letter")
+                      console.log ("letter click")
 
                     // make a line through the letter
                       $(this).css("text-decoration", "line-through");
-                      console.log("line-through not working");
+                      console.log("line-through");
 
                     // if the letter has already been clicked on, 
                     // let the user know it's already been tried
@@ -119,13 +114,13 @@
                       // and replace the letters with blanks in word
                       while (word.includes (letter)) {
                        index = word.indexOf (letter);
-                       console.log ("index of word is ", index");
+                       console.log ("index of word is", index");
                        word = word.substring(0, index) + " " + word.substring ((index + 1));
                        blank = blank.substring(0,index) + letter + blank.substring ((index + 1));
 
                        $("#word").text(blank);
-                       console.log ("word is ", word"");
-                       console.log ("blank is ", blank"");
+                       console.log ("word is", word"");
+                       console.log ("blank is", blank"");
                       }
                      
                       // check if the player has won the game
