@@ -53,8 +53,8 @@
               // this is the secret word!
               word =  "c o m e u p p a n c e";
               blank = "- - - - - - - - - - -";
-              $("#word").text(blank);
-           console.log("blanks responding")
+                $("#word").text(blank);
+                console.log("blanks responding")
 
               // this is the list of letters that have been tried
               triedLetters = "";
@@ -72,16 +72,15 @@
 
                   // check if the game has been won or lost
                   if (gameWon != true && gameLost != true) {
-                    // erase the info box
+                     // erase the info box
                       $("#info").text("");
                 
                     // use text to get the letter that was clicked on
-                      letter = $(this).text(" ");
+                      letter = $(this).text("");
                       console.log("letter click")
 
                     // make a line through the letter
-                      $(this).css("text-decoration", "line-through");
-                      console.log("line-through");
+                      $(this).css("text-decoration" ,"line-through");
                   }
                     // if the letter has already been clicked on, 
                     // let the user know it's already been tried
