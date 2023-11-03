@@ -5,29 +5,8 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
      crossorigin=""/>
-  </head>
 
-  <style>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/>
-    
-    h3 {
-      font-color: blue;
-      font-family: Helvetica, Arial, times, serif;
-      font-weight: bold;
-    }
-
-    #map {
-      height: 180px;
-    }
-
-  </style>
   
-       <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-         crossorigin="">
-
          
      var map = L.map('map').setView([51.505, -0.09], 13);
      L.tileLayer(''https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -61,6 +40,27 @@
            alert("You clicked the map at " + e.latlng.toString());
          }
          map.on('click', onMapClick);
+  
+  </head>
+
+  <style></style>
+    
+    h3 {
+      font-color: 2E8B57;
+      font-family: Helvetica, Arial, times, serif;
+      font-weight: bold;
+    }
+
+    #map {
+      height: 180px;
+    }
+
+  </style>
+  
+       <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+         crossorigin="">
+
        </script>
   
   <body>
