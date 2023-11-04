@@ -30,11 +30,11 @@
        marker.bindPopup("<b>Hello world! I am a popup.").openPopup();
        
        var circle = L.circle([51.508, -0.11]), {
-         color: "red",
-         fillColor: "#f03",
+         color: red,
+         fillColor: #f03,
          fillOpacity: 0.5,
          radius: 500,
-       }).addTo(map);
+       }).addTo(map),
        circle.bindPopup("I am a circle.");
 
        var polygon = L.polygon([
