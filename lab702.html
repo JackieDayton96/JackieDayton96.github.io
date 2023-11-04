@@ -35,7 +35,7 @@
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
-    radius: 100
+    radius: 500
     }).addTo(map);
       circle.bindPopup("Where I caught a leopard shark.");
 
@@ -47,8 +47,10 @@
     [32.736044, -117.151021],
     [32.736005, -117.151084],
     [32.735950, -117.151074],
-    [32.735937, -117.151102]
-]).addTo(map);
+    [32.735937, -117.151102], {
+      color: 'purple',
+      fillColor: 'purple',
+    }]).addTo(map);
        polygon.bindPopup("My favorite part of San Diego.");
 
     var popup = L.popup()
