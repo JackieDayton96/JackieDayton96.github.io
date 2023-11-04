@@ -22,34 +22,38 @@
     <div id="map"></div>
     
     <script>
-    var map = L.map("map").setView([47.30312,-122.43262], 16);
+    var map = L.map("map").setView([32.8241205,-117.438632], 10);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
+    maxZoom: 20,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 
-    var marker = L.marker([47.30316,-122.43265]).addTo(map);
-      marker.bindPopup("This was my childhood home.");
+    var marker = L.marker([32.9443763,-117.1326113]).addTo(map);
+      marker.bindPopup("Where I stay when I visit.");
     
-    var circle = L.circle([47.30568,-122.44348], {
+    var circle = L.circle([32.655091, -117.135699], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
     radius: 100
     }).addTo(map);
-      circle.bindPopup("The local beach!.");
+      circle.bindPopup("Where I caught a leopard shark.");
 
     var polygon = L.polygon([
-    [47.30291,-122.42789],
-    [47.30291,-122.42259],
-    [47.30103,-122.42255],
-    [47.30112,-122.42788]
+    [32.735877, -117.151092],
+    [32.735892, -117.150988],
+    [32.735986, -117.150942],
+    [32.736012, -117.150944],
+    [32.736044, -117.151021],
+    [32.736005, -117.151084],
+    [32.735950, -117.151074],
+    [32.735937, -117.151102]
 ]).addTo(map);
-       polygon.bindPopup("My elementary school.");
+       polygon.bindPopup("My favorite part of San Diego.");
 
     var popup = L.popup()
-    .setLatLng([47.3034,-122.4372])
-    .setContent("<b>Browns Point, Tacoma, WA</b><br>Where I grew up!.")
+    .setLatLng([])
+    .setContent("<b>San Diego, CA</b><br>One of my favorite places to visit")
     .openOn(map);
     </script>
 
