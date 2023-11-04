@@ -1,0 +1,57 @@
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>This is a map</title>
+
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    
+<style>
+      #map { width: 90vw; height: 90vh }
+</style>
+  </head>
+
+  <body>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
+    <div id="map"></div>
+    
+    <script>
+    var map = L.map("map").setView([47.30312,-122.43262], 16);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    var marker = L.marker([47.30316,-122.43265]).addTo(map);
+      marker.bindPopup("This was my childhood home.");
+    
+    var circle = L.circle([47.30568,-122.44348], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 100
+    }).addTo(map);
+      circle.bindPopup("The local beach!.");
+
+    var polygon = L.polygon([
+    [47.30291,-122.42789],
+    [47.30291,-122.42259],
+    [47.30103,-122.42255],
+    [47.30112,-122.42788]
+]).addTo(map);
+       polygon.bindPopup("My elementary school.");
+
+    var popup = L.popup()
+    .setLatLng([47.3034,-122.4372])
+    .setContent("<b>Browns Point, Tacoma, WA</b><br>Where I grew up!.")
+    .openOn(map);
+    </script>
+
+  </body>
+</html>
