@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<title>Lab 8 - Denver Neighborhood Data</title>
+	<title>Lab 9 - Choropleth Map</title>
 	
 	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
 
@@ -99,7 +99,7 @@
 
 		
 		// let's add the Denver ACS data -- ##4 here
-                $.getJSON('./acs_denver_2021.geojson', function(data) {
+                $.getJSON('./acs_denver_2021.geojson.txt', function(data) {
 			acsDenver2021Layer = L.geoJSON(data, 
                            { style: style1 }).addTo(map);
 			map.panTo(acsDenver2021Layer.getBounds().getCenter());
