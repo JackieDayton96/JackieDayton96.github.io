@@ -98,7 +98,7 @@
 
 		
 		// let's add the Denver ACS data -- ##4 here
-                $.getJSON('./adultAsthma2013_2016.txt', function(data) {
+                $.getJSON('./adult_asthma_2013_2016.zip', function(data) {
 			adultAsthma2013_2016Layer = L.geoJSON(data, 
                                               { style: style1 }).addTo(map);
 			map.panTo(adultAsthma2013_2016Layer.getBounds().getCenter());
