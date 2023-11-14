@@ -76,14 +76,14 @@
 
 		//begin style1
 		function style1(feature) {
-			d = feature.properties.PCT_languageOtherThanEnglish;
-		answer = d > 30 ? '#800026' : 
-			d > 20 ? '#DB0026' : 
-			d > 15 ? '#E31A1C' : 
-			d > 10 ? '#FC4E2A' : 
-			d > 5 ? '#FD8D3C' : 
-			d > 3 ? '#FEB24C' : 
-			d > 1 ? '#FED976' : 
+			d = feature.properties.TTL_POPULATION_ALL-ONLY_ENGLISH_LNG;
+		answer = d > 10000 ? '#800026' : 
+			d > 7500 ? '#DB0026' : 
+			d > 5000 ? '#E31A1C' : 
+			d > 2500 ? '#FC4E2A' : 
+			d > 1000 ? '#FD8D3C' : 
+			d > 500 ? '#FEB24C' : 
+			d > 100 ? '#FED976' : 
 				'#FFEDA0';
 			style = {
 				fillColor: answer,
@@ -102,8 +102,8 @@
 			//convert file (data) into a layer
 			acsDenver2021Layer = L.geoJSON(data, { style : style1,
 			onEachFeature : function(feature, layer) {
-				layer.bindPopup("Percent Poverty: " + 
-                                feature.properties.PCT_POVERTY + "%");
+				layer.bindPopup("Forgein Language Speakers: " + 
+                                feature.properties.TTL_POPULATION_ALL-ONLY_ENGLISH_LNG);
 			}
 			}).addTo(map);
 			
