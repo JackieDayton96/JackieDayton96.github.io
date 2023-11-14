@@ -76,7 +76,7 @@
 
 		//begin style1
 		function style1(feature) {
-			d = feature.properties.TTL_POPULATION_ALL-ONLY_ENGLISH_LNG;
+			d = feature.properties.TTL_POPULATION_ALL - feature.properties.ONLY_ENGLISH_LNG;
 		answer = d > 10000 ? '#800026' : 
 			d > 7500 ? '#DB0026' : 
 			d > 5000 ? '#E31A1C' : 
@@ -103,7 +103,7 @@
 			acsDenver2021Layer = L.geoJSON(data, { style : style1,
 			onEachFeature : function(feature, layer) {
 				layer.bindPopup("Forgein Language Speakers: " + 
-                                feature.properties.TTL_POPULATION_ALL-ONLY_ENGLISH_LNG);
+                                feature.properties.TTL_POPULATION_ALL - feature.properties.ONLY_ENGLISH_LNG);
 			}
 			}).addTo(map);
 			
