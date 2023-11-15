@@ -102,8 +102,7 @@
 			//convert file (data) into a layer
 			acsDenver2021Layer = L.geoJSON(data, { style : style1,
 			onEachFeature : function(feature, layer) {
-				layer.bindPopup("Forgein Language Speakers: " + 
-                                feature.properties.TTL_POPULATION_ALL - feature.properties.ONLY_ENGLISH_LNG));
+				layer.bindPopup("Forgein Language Speakers: " + d);
 			}
 			}).addTo(map);
 			
