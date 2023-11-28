@@ -108,8 +108,24 @@
 				fillOpacity : 0.7
 			}
 			return style;
+		}
+		
+		// let's add the Denver ACS data -- ##4 here
+                $.getJSON('./acsDenver2021Layer.txt', function(data) {
+			//convert file (data) into a layer
+			acsDenver2021Layer = L.geoJSON(data, { style : style1,
+			onEachFeature : function(feature, layer) {
+				layer.bindPopup("Forgein Language Speakers: " + d);
+			}
+			}).addTo(map);
+			
+			//move map to area of data
+			map.panTo(acsDenver2021Layer.getBounds().getCenter());
 
-      var legend = L.control({position: 'bottomright'});
+			// add the map to the layer controls
+			layerControl.addOverlay(acsDenver2021Layer, "Census 2021");
+		});
+var legend = L.control({position: 'bottomright'});
 
 legend.onAdd = function (map) {
 
@@ -131,23 +147,6 @@ legend.onAdd = function (map) {
 
         legend.addTo(map);
       
-		}
-
-		
-		// let's add the Denver ACS data -- ##4 here
-                $.getJSON('./acsDenver2021Layer.txt', function(data) {
-			//convert file (data) into a layer
-			acsDenver2021Layer = L.geoJSON(data, { style : style1,
-			onEachFeature : function(feature, layer) {
-				layer.bindPopup("Forgein Language Speakers: " + d);
-			}
-			}).addTo(map);
-			
-			//move map to area of data
-			map.panTo(acsDenver2021Layer.getBounds().getCenter());
-
-			// add the map to the layer controls
-			layerControl.addOverlay(acsDenver2021Layer, "Census 2021");
 		});
 
 		
