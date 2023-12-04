@@ -54,13 +54,13 @@
         //add GeoJSON
 	$.getJSON('./GreeceAndTurkey.geo.json' , function(data) {
 		//convert file into GeoJson
-		GreeceAndTurkeyLayer = L.geoJSON(data).addTo(map);
+		greeceAndTurkeyLayer = L.geoJSON(data).addTo(map);
 		
 		//move map to area
-		map.panTo(GreeceAndTurkeyLayer.getBounds().getCenter());
+		map.panTo(greeceAndTurkeyLayer.getBounds().getCenter());
 
 		// add to layer controls
-		layerControl.addOverlay(GreeceAndTurkeyLayer);
+		layerControl.addOverlay(greeceAndTurkeyLayer);
 		
 	});
 	});
