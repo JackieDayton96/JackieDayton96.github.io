@@ -52,7 +52,7 @@
         var layerControl = L.control.layers(baseMaps,null).addTo(map);
 
         //add GeoJSON
-	$.getJSON('./GreeceAndTurkey.geo.json' , function(data) {
+	$.getJSON('./GreeceAndTurkey2.txt' , function(data) {
 		//convert file into GeoJson
 		GreeceAndTurkeyLayer = L.geoJSON(data).addTo(map);
 		
@@ -60,7 +60,7 @@
 		map.panTo(GreeceAndTurkeyLayer.getBounds().getCenter());
 
 		// add to layer controls
-		layerControl.addOverley(GreeceAndTurkeyLayer);
+		layerControl.addOverlay(GreeceAndTurkeyLayer);
 		
 	});
 	});
