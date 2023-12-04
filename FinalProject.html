@@ -54,7 +54,7 @@
         //add GeoJSON
 	$.getJSON('./GreeceAndTurkey.geo.json' , function(data) {
 		GreeceAndTurkeyLayer = L.geoJSON(data).addTo(map);
-		map.panTo(GreeceAndTurkeyLayer);
+		map.panTo(GreeceAndTurkeyLayer.getBounds().getCenter());
 		
 	});
 	});
