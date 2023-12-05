@@ -52,7 +52,7 @@
         var layerControl = L.control.layers(baseMaps,null).addTo(map);
 
         //add GeoJSON
-	$.getJSON('./ne_50m_land.shp' , function(data) {
+	$.getJSON('./custom.geo (3).json' , function(data) {
 		//convert file into GeoJson
 		greeceAndTurkeyLayer = L.geoJSON(data).addTo(map);
 		
