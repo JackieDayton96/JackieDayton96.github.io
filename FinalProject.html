@@ -36,7 +36,7 @@
         $(document).ready(function() {
           
           //add basemep and background tiles
-          map = L.map('map').setView([0,0], 10);
+          map = L.map('map').setView([37.027159, 21.695067], 20);
           var OSMTiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
               maxZoom: 20,
               attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -47,7 +47,29 @@
 		      });
 		//add 12 markers and popups with labors
 		var marker = L.marker([37.81834040761616, 22.661747815062714]).addTo(map);
-                    marker.bindPopup("The First Labor")
+                    marker.bindPopup("1: The Nemean Lion")
+		var marker = L.marker([37.558121, 22.706667]).addTo(map);
+		    marker.bindPopup("2: The Hydra")
+		var marker = L.marker([37.890586, 21.527288]).addTo(map);
+		 marker.bindPopup("3: The Horned Hind")
+		var marker = L.marker([37.890568, 21.527288]).addTo(map);
+		 marker.bindPopup("4: The Erymanthian Boar")
+		var marker = L.marker([37.966915, 21.629884]).addTo(map);
+		 marker.bindPopup("5: The Augean Stables ")
+		var marker = L.marker([37.852338, 22.461780]).addTo(map);
+		 marker.bindPopup("6: The Stymphalian Birds")
+		var marker = L.marker([35.338972, 25.146013]).addTo(map);
+		 marker.bindPopup("7: The Cretan Bull")
+		var marker = L.marker([42.343980, 25.263988]).addTo(map);
+		 marker.bindPopup("8: The Mares of Diomedes")
+		var marker = L.marker([51.050073, 39.864636]).addTo(map);
+		 marker.bindPopup("9: The Girdle of Hippolyte")
+		var marker = L.marker([40.315254, 26.551427]).addTo(map);
+		 marker.bindPopup("10: The Oxen of Geryones")
+		var marker = L.marker([42.6366, 44.1576]).addTo(map);
+		 marker.bindPopup("11: The Apples of Hesperides")
+		var marker = L.marker([37.498056, 23.363567]).addTo(map);
+		 marker.bindPopup("12: Cerbeus")
 
 			  
         //two basemaps and control to turn on / off
