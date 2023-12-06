@@ -36,7 +36,7 @@
         $(document).ready(function() {
           
           //add basemep and background tiles
-          map = L.map('map').setView([37.027159, 21.695067], 20);
+          map = L.map('map').setView([37.027159, 21.695067], 10);
           var OSMTiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
               maxZoom: 20,
               attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -78,7 +78,7 @@
         var layerControl = L.control.layers(baseMaps,null).addTo(map);
 
         //add GeoJSON
-	$.getJSON('./custom.geo (3).json' , function(data) {
+	$.getJSON('./greeceAndTurkey3.txt' , function(data) {
 		//convert file into GeoJson
 		greeceAndTurkeyLayer = L.geoJSON(data).addTo(map);
 		
