@@ -171,6 +171,7 @@
 		//add 12 markers and popups with labors
 		var marker = L.marker([37.81834040761616, 22.661747815062714]).addTo(map);
                     marker.bindPopup("1: The Nemean Lion")
+			<button id="#zoom-task1">Zoom to details</button>
 		var marker = L.marker([37.558121, 22.706667]).addTo(map);
 		    marker.bindPopup("2: The Hydra")
 		var marker = L.marker([37.890586, 21.527288]).addTo(map);
@@ -194,115 +195,12 @@
 		var marker = L.marker([37.498056, 23.363567]).addTo(map);
 		 marker.bindPopup("12: Cerbeus")
 
-	//Hide and show labor 1
-		$("#hide").click(function(){
-                  console.log("hide info")
-                 $("#Labor1").hide(1500);
-       		 });
-                $("#show").click(function(){
-			console.log("show info")
-                $("#Labor1").show(1500);
-        		 });
-	//hide and show labor 2
-		$("#hide").click(function(){
-                 console.log("hide info")
-                $("#Labor2").hide(1500);
-       		 });
-                $("#show").click(function(){
-			console.log("show info")
-                $("#Labor2").show(1500);
-        		});
-	//hide and show labor 3
-		$("#hide").click(function(){
-                console.log("hide info")
-                $("#Labor3").hide(1500);
-       		 });
-                 $("#show").click(function(){
-			 console.log("show info")
-                 $("#Labor3").show(1500);
-       		 });
-	//hide and show labor 4
-		$("#hide").click(function(){
-                console.log("hide info")
-                $("#Labor4").hide(1500);
-     		 });
-                $("#show").click(function(){
-			console.log("show info")
-                $("#Labor4").show(1500);
-     		 });
-	//hide and show labor 5
-		$("#hide").click(function(){
-               console.log("hide info")
-               $("#Labor5").hide(1500);
-     		 });
-           	 $("#show").click(function(){
-			 console.log("show info")
-    		$("#Labor5").show(1500);
-     		 });
-	//hide and show labor 6
-		$("#hide").click(function(){
-      		console.log("hide info")
-    		$("#Labor6").hide(1500);
-     	 	});
-    		$("#show").click(function(){
-			console.log("show info")
-    		$("#Labor6").show(1500);
-      		});
-	//hide and show labor 7
-		$("#hide").click(function(){
-      		console.log("hide info")
-    		$("#Labor7").hide(1500);
-     		 });
-   		 $("#show").click(function(){
-			 console.log("show info")
-   		 $("#Labor7").show(1500);
-     		 });
-	//hide and show labor 8
-		$("#hide").click(function(){
-      		console.log("hide info")
-   		 $("#Labor8").hide(1500);
-     		 });
-    		$("#show").click(function(){
-			console.log("show info")
-    		$("#Labor8").show(1500);
-     		 });
-	//hide and show labor 9
-		$("#hide").click(function(){
-      		console.log("hide info")
-    		$("#Labor9").hide(1500);
-     		 });
-    		$("#show").click(function(){
-			console.log("show info")
-    		$("#Labor9").show(1500);
-     		 });
-	//hide and show labor 10
-		$("#hide").click(function(){
-      		console.log("hide info")
-    		$("#Labor10").hide(1500);
-     		 });
-    		$("#show").click(function(){
-			console.log("show info")
-   		 $("#Labor10").show(1500);
-     		 });
-	//hide and show labor 11
-		$("#hide").click(function(){
-      		console.log("hide info")
-    		$("#Labor11").hide(1500);
-      		});
-    		$("#show").click(function(){
-			console.log("show info")
-    		$("#Labor11").show(1500);
-     		 });
-	//hide and show labor 12
-		$("#hide").click(function(){
-      		console.log("hide info")
-    		$("#Labor12").hide(1500);
-     		 });
-    		$("#show").click(function(){
-			console.log("show info")
-   		 $("#Labor12").show(1500);
-      		});
-			  
+	//click popup and zoom to description
+	${"#zoom-task1"}.click(function() {
+		$("#task1")animate({scrollTop: $("#task1").offset().top}, 'slow');
+	});
+
+	 
         //two basemaps and control to turn on / off
         var baseMaps = { "OpenStreetMap" : OSMTiles,
                         "OpenTopoMap" : OpenTopoMap };
@@ -333,20 +231,17 @@
       
       <div id="map"></div>
 
-	   <div id="Labor1">
-		   <p>THE FIRST LABOR: The Nemean Lion</p>
+	   <div id="task1">THE FIRST LABOR: The Nemean Lion
+		   
                 <img id="Lion" src="herakles-wrestling-with-the-nemean-lion-by-psiax.webp">
                 <p class="caption">Herakles Wrestleing with the Nemean Lion<p/>
                 <p class="caption">Psiax (520–500 BCE) Photograph by Maria Daniels</p>
                 <p class="caption"><a href = 'https://www.perseus.tufts.edu/Herakles/lion.html'>University of Mississippi</a>
             </p>
 	    <p class="description">Heracles' was first sent to Nemea to defeat the lion with a nearly impenetrable pelt. Using his bare hands, Heracles was 
-		    able to defeat the beast and then use the pelt of the Nemean lion as a type of armor.</p>
-	   <button id="show">Show</button>
-	   <button id="hide">Hide</button>
-	   </div>
-	    
-	    <div id="Labor2">
+		    able to defeat the beast and then use the pelt of the Nemean lion as a type of armor.</p></div>
+	  
+	    <div id="task2">
 		    <p>THE SECOND LABOR: The Hydra</p>
 	        <img id="Hydra" src="hercules-and-the-lernaean-hydra-1875-1876-by-gustave-moreau-art-institute-of-chicago.webp">
 	        <p class="caption">Hercules and the Lernean Hydra</p>
@@ -356,11 +251,9 @@
 					   of the nine heads while being held by the creature. As the heads were destroyed, Iolaus burnt the stumps to ensure
 					   they would not grow back. After, Heracles buried the one immortal head (which was severed instead of being crushed) and
 					   dipped his arrows in the venom of the Hydra.</p>
-	    <button id="show">Show</button>
-		    <button id="hide">Hide</button>
 	    </div>
 		    
-	   <div id="Labor3">
+	   <div id="task3">
 		   <p>THE THIRD LABOR: The Horned Hind</p>
 		    <img id="Hind" src="heracles-chasing-ceryneian-hind-illustration-1913.webp">
 		    <p class="caption">Heracles Chasing the Ceryneian Hind</p>
@@ -369,11 +262,9 @@
 		    <p class="description">The Hind was a female red deer that was special to Artemis with its golden horns and bronze hooves. Heracles chased
 		    this animal for an entire year before he captured it, though he had to make a deal with the goddess Artemis so he could finish his task, bringing
 		    it to King Eurystheus alive, though it ended up escaping once in Mycenae.</p>
-	   <button id="show">Show</button>
-		   <button id="hide">Hide</button>
 	   </div>
 	    
-	    <div id="Labor4">
+	    <div id="task4">
 		    <p>THE FOURTH LABOR: The Erymanthian Boar</p>
 	         <img id="Boar" src="hercules-catching-the-boar-of-erymanthus-simon-frisius-after-antonio-tempesta-1610-64.webp">
 	          <p class="caption">Hercules Catching the Boar of Erymanthus</p>
@@ -382,11 +273,9 @@
 			  <p class="description">After an encounter with Chiron and a group of other centaurs, Heracles was able to defeat the boar of Mount Erymanthus 
 			  by chasing the boar around the mountain. The boar became frightened and hid in a thicket, which allowed Heracles to push it into a deep snow 
 			  where Heracles cold net him to take back to Mycenae.</p>
-	    <button id="show">Show</button>
-		    <button id="hide">Hide</button>
 	    </div>
        
-	    <div id="Labor5">
+	    <div id="task5">
 		    <p>THE FIFTH LABOR: The Augean Stables</p>
 	     <img id="Stables" src="hercules_clean_the_augean_stables_in_a_single_day_by_sylvester0102_dft9i79-414w-2x.jpg">
 	       <p class="caption">Hercules clean the Augean stables in a single day</p>
@@ -396,11 +285,9 @@
 	    was that they housed a thousand cattle and had never been cleaned. Agreeing to pay Heracles one-tenth of his cattle, King Augeas agreed to the deal. Heracles then
 	    used two rivers to clean out the stables by digging trenches, which succeeded in cleaning the stables. To King Eurystheus however, this did not count because,
 	    Heracles was paid for his work.</p>
-	    <button id="show">Show</button>
-		    <button id="hide">Hide</button>
 	    </div>
 
-	   <div id="labor6">
+	   <div id="task6">
 		   <p>THE SIXTH LABOR:The Stymphalian Birds</p>
 	     <img id="Birds" src="hercules-killing-the-stymphalian-birds-by-albrecht-d_rer-circa-1500-germanisches-nationalmuseum.webp">
 	       <p class="caption">Hercules Killing the Stmphalian Birds</p>
@@ -409,11 +296,9 @@
 	    <p class="description">The Stymphalian Birds were the favored animals of the Ares due to their bronze breaks and launchable metallic feathers. As his sixth task, Heracles
 	    Heracles frightened them from Lake Stymphalia with special tools made by Hephestus and his bow and arrows. After shooting some from the sky, Heracles because successful 
 	    in this task because the flock failed to return.</p>
-	   <button id="show">Show</button>
-		   <button id="hide">Hide</button>
 	   </div>
 
-	    <div id="Labor7">
+	    <div id="task7">
 		    <p>THE SEVENTH LABOR:The Cretan Bull</p>
 	     <img id="Bull" src="hercules_ropes_cretan_bull.jpeg">
 	       <p class="caption">Hercules Ropes the Cretan Bull</p>
@@ -422,11 +307,9 @@
 	    <p class="description">Heracles next sailed to Crete where he was to capture the bull who lived there alive. This bull was famous because it fathered the Minotaur,
 	    which did make it difficult for Heracles to capture. Once captured, Heralces returned to Mycenae and presented it to the king. After, the Cretan Bull was released
 	    and fled to Marathon.</p>
-	    <button id="show">Show</button>
-		    <button id="hide">Hide</button>
 	    </div>
 
-	   <div id="Labor8">
+	   <div id="task8">
 		   <p>THE EIGHTH LABOR:The Mares of Diomedes</p>
 	     <img id="Mares" src="main-image.jpg">
 	       <p class="caption">Hercules and the Mares of Diomedes</p>
@@ -435,11 +318,9 @@
 	    <p class="description">The Mares of Diomedes were quite strange, as their diet consisted of the flesh of the uninvited guests of their owner, Diomedes. Heracles 
 	    travled to Thrace to capture them. Killing Diomedes and feeding him to the mares, Heralces began his journey back to Mycenae when the twon of Tirida realized their king had been slain.
 	    The townspeople quickly gave up their pursuit because Heracles chased them all away with a chariot pulled by the four man-eating mares.</p>
-	   <button id="show">Show</button>
-		   <button id="hide">Hide</button>
 	   </div>
 
-	    <div id="Labor9">
+	    <div id="task9">
 		    <p>THE NINTH LABOR: The Girdle of Hippolyta</p>
 	        <img id="Girdle" src="Joseph_Kuhn-R__gnier_-_Hippolyta.webp">
 	        <p class="caption">Hippolyta</p>
@@ -449,11 +330,9 @@
 	    as Queen of the Amazons. Heacles was clear with Hippolyta about what he needed to do, but Hera, angry that the Amazonian Queen would agree so easily, convince the 
 	    other Amazons that Heracles was really there to abduct their queen. Heracles assumed that Hippolyta gave an order to kill him, seeing all the other Amazonians 
 		    ready for battle, and thus killed her and took her girdle.</p>
-	    <button id="show">Show</button>
-		    <button id="hide">Hide</button>
 	    </div>
 
-	   <div id="Labor10">
+	   <div id="task10">
 		   <p>THE TENTH LABOR:The Oxen of Geryones</p>
                <img id="Oxen" src="hercules-kills-geryon-and-his-dog-cornelis-cort-after-frans-floris-ca-1563-95.webp">
 	       <p class="caption">Hercules Kills Geryon and His Dog</p>
@@ -461,11 +340,9 @@
 	       <p class="caption"><a href = 'https://www.rijksmuseum.nl/en/collection/RP-P-1899-A-21764'>RIJKSMUSEUM</a></p>
 	    <p class="description">This next task saw Heracles venture to Erythia to obtain the cattle of Geryon. First, Heracles was confronted by Geryon's two headed dog, then again by 
 	    Geryone himself, the Three-bodied giant. Salying both, Heracles then herded them back to King Eurystheus.</p>
-	   <button id="show">Show</button>
-		   <button id="hide">Hide</button>
 	   </div>
 	    
-	    <div id="Labor11">
+	    <div id="task11">
 		    <p>THE ELEVENTH LABOR:The Apples of Hesperides</p>
                <img id="Apples" src="1990.14.0210.jpeg">
 	       <p class="caption">Hercules in the garden of the Hesperides</p>
@@ -474,11 +351,9 @@
 	    <p class="description">This task took Heracles very far from Mycenae. Not knowing where the Garden of Hesperides was, he traveled the world until he found Prometheus
 	    who told him that Atlas knew where the garden was. Atlas agreed to retrieve the apples for Heracles if Heracles could hold up the sky for him. Upon his return, 
 		    Heracles had to trick Atlas into taking back his burden so he could return the apples to Mycenae.</p>
-	    <button id="show">Show</button>
-		    <button id="hide">Hide</button>
 	    </div>
 	    
-	    <div id="Labor12">
+	    <div id="task12">
 		    <p>THE TWELFTH LABOR: Cerberus</p>
 	       <img id="Cerberus" src ="hercules-and-cerberus-statue-by-antonin-pavel-wagner-hofburg-palace-vienna.webp">
 	       <p class="caption">Hercules and Cerberus Statue</p>
@@ -487,8 +362,6 @@
 	    <p class="description">This last task was thought to be impossible by the king of Mycenae. Heracles was to look for a way into the Underworld so he could bring back Cerberus.
 		    Finding a route into the Underworld, Heracles was able to baragin to bring Cerberus to King Eurystheus to complete
 	    his final task. Hades agreed, and Heracles was able to carry Cerberus out of the Underworld to show the king of Mycenae. </p>
-	    <button id="show">Show</button>
-		    <button id="hide">Hide</button>
 	    </div>
       
     </body>
