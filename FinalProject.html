@@ -201,7 +201,7 @@
         var layerControl = L.control.layers(baseMaps,null).addTo(map);
 
         //add GeoJSON
-	$.getJSON('./greeceAndTurkey3.txt' , function(data) {
+	$.getJSON('./GreeceTurkeyBulgariaGeorigaRussia.json' , function(data) {
 		//convert file into GeoJson
 		greeceAndTurkeyLayer = L.geoJSON(data).addTo(map);
 		
